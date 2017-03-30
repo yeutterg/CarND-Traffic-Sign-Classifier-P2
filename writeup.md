@@ -1,8 +1,8 @@
-#**Traffic Sign Recognition** 
+# Traffic Sign Recognition** 
 
-##Project Writeup
-# by Greg Yeutter
-# 2017-03-28
+## Project Writeup
+### by Greg Yeutter
+### 2017-03-30
 
 ---
 
@@ -19,29 +19,29 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./results/visualization.jpg "Visualization"
-[image2]: ./results/process1.jpg "Preprocessing result 1"
-[image3]: ./results/process2.jpg "Preprocessing result 2"
-[image4]: ./results/process3.jpg "Preprocessing result 3"
-[image5]: ./results/ext1.jpg "Traffic Sign 1"
-[image6]: ./results/ext2.jpg "Traffic Sign 2"
-[image7]: ./results/ext3.jpg "Traffic Sign 3"
-[image8]: ./results/ext4.jpg "Traffic Sign 4"
-[image9]: ./results/ext5.jpg "Traffic Sign 5"
+[image1]: ./results/visualization.png "Visualization"
+[image2]: ./results/process1.png "Preprocessing result 1"
+[image3]: ./results/process2.png "Preprocessing result 2"
+[image4]: ./results/process3.png "Preprocessing result 3"
+[image5]: ./results/ext1.png "Traffic Sign 1"
+[image6]: ./results/ext2.png "Traffic Sign 2"
+[image7]: ./results/ext3.png "Traffic Sign 3"
+[image8]: ./results/ext4.png "Traffic Sign 4"
+[image9]: ./results/ext5.png "Traffic Sign 5"
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
+### Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
 You're reading it! and here is a link to my [project code](https://github.com/yeutterg/CarND-Traffic-Sign-Classifier-P2/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
 The code for this step is contained in the "Step 1" section of the Jupyter notebook. It is the first code cell of that section.
 
@@ -52,7 +52,7 @@ I used numpy and python functions to calculate summary statistics of the traffic
 * The shape of a traffic sign image is (32, 32, 3) (3 for each RGB channel)
 * The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
+#### 2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
 
 The code for this step is contained in the rest of the "Step 1" section of the Jupyter notebook.  
 
@@ -106,9 +106,9 @@ It appeared that some classes had more items than others. This histogram shows t
 
 ![histogram][image1]
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
+#### 1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
 The code for this step is contained in the first code cell of "Step 2" in the Jupyter notebook.
 
@@ -123,13 +123,13 @@ Here are some examples of processed images:
 ![preprocessed image 2][image3]
 ![preprocessed image 3][image4]
 
-####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
+#### 2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
 The project data was pre-split into training, validation, and test sets. The training, validation, and test sets were all converted to grayscale, normalized, and equalized.
 
 The training set contained 34,799 images. The validation set contained 4,410 images, and the test set contained 12,630 images.
 
-####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 The model architecture is located in the 3rd code cell of Step 2, under Model Architecture. The final model is a modified version of LeNet, that includes dropout on the third and fourth layers (out of five).
 
@@ -154,7 +154,7 @@ The final model consists of the following layers:
 | 5a. Fully connected       | outputs 43                                    |
 | 5b. Logits                |                                               | 
 
-####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 keep prob for training
 
@@ -167,7 +167,7 @@ Some parameter tuning resulted in a 96.5% validation accuracy over 30 epochs. Th
 * Dropout probability: 0.7
 * Learning rate: 0.002
 
-####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 The code for calculating the accuracy of the model is located in the Train, Test, and Validate section of the notebook.
 
@@ -208,9 +208,9 @@ Fully connected layers are used to learn nonlinear combinations of feature outpu
 
 Dropout prevents overfitting on various layers. Fully connected layers are especially prone to overfitting.
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
 
@@ -226,7 +226,7 @@ The third and fourth images could be difficult to classify because a number of s
 The fifth image was not actually represented in the dataset. A similar end of speed limit sign was represented, but at 80 km/h instead of 120 km/h.
 
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 The code for making predictions on my final model is located in Step 3, under Predict the Sign Type for Each Image.
 
@@ -247,7 +247,7 @@ For the end of speed limit sign, although the exact sign was not represented in 
 
 An accuracy of 40$ does not reflect the 90+% accuracies of the validation and test sets. An improved model may be able to increase this accuracy, as well as a more diverse training set.
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in Step 3, under Output Top 5 Softmax Probabilities.
 
