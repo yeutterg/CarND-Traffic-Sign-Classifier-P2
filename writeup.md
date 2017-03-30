@@ -1,8 +1,9 @@
-# Traffic Sign Recognition** 
+# Traffic Sign Recognition 
 
 ## Project Writeup
-### by Greg Yeutter
-### 2017-03-30
+
+by Greg Yeutter
+2017-03-30
 
 ---
 
@@ -37,7 +38,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/yeutterg/CarND-Traffic-Sign-Classifier-P2/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/yeutterg/CarND-Traffic-Sign-Classifier-P2/blob/master/Traffic_Sign_Classifier.ipynb).
 
 ### Data Set Summary & Exploration
 
@@ -58,49 +59,49 @@ The code for this step is contained in the rest of the "Step 1" section of the J
 
 The first exploration of the dataset lists the number of each class, the description of the trffic sign, and the count of that class in the dataset:
 
-Class: 0, Desc: Speed limit (20km/h), Count: 180
-Class: 1, Desc: Speed limit (30km/h), Count: 1980
-Class: 2, Desc: Speed limit (50km/h), Count: 2010
-Class: 3, Desc: Speed limit (60km/h), Count: 1260
-Class: 4, Desc: Speed limit (70km/h), Count: 1770
-Class: 5, Desc: Speed limit (80km/h), Count: 1650
-Class: 6, Desc: End of speed limit (80km/h), Count: 360
-Class: 7, Desc: Speed limit (100km/h), Count: 1290
-Class: 8, Desc: Speed limit (120km/h), Count: 1260
-Class: 9, Desc: No passing, Count: 1320
-Class: 10, Desc: No passing for vehicles over 3.5 metric tons, Count: 1800
-Class: 11, Desc: Right-of-way at the next intersection, Count: 1170
-Class: 12, Desc: Priority road, Count: 1890
-Class: 13, Desc: Yield, Count: 1920
-Class: 14, Desc: Stop, Count: 690
-Class: 15, Desc: No vehicles, Count: 540
-Class: 16, Desc: Vehicles over 3.5 metric tons prohibited, Count: 360
-Class: 17, Desc: No entry, Count: 990
-Class: 18, Desc: General caution, Count: 1080
-Class: 19, Desc: Dangerous curve to the left, Count: 180
-Class: 20, Desc: Dangerous curve to the right, Count: 300
-Class: 21, Desc: Double curve, Count: 270
-Class: 22, Desc: Bumpy road, Count: 330
-Class: 23, Desc: Slippery road, Count: 450
-Class: 24, Desc: Road narrows on the right, Count: 240
-Class: 25, Desc: Road work, Count: 1350
-Class: 26, Desc: Traffic signals, Count: 540
-Class: 27, Desc: Pedestrians, Count: 210
-Class: 28, Desc: Children crossing, Count: 480
-Class: 29, Desc: Bicycles crossing, Count: 240
-Class: 30, Desc: Beware of ice/snow, Count: 390
-Class: 31, Desc: Wild animals crossing, Count: 690
-Class: 32, Desc: End of all speed and passing limits, Count: 210
-Class: 33, Desc: Turn right ahead, Count: 599
-Class: 34, Desc: Turn left ahead, Count: 360
-Class: 35, Desc: Ahead only, Count: 1080
-Class: 36, Desc: Go straight or right, Count: 330
-Class: 37, Desc: Go straight or left, Count: 180
-Class: 38, Desc: Keep right, Count: 1860
-Class: 39, Desc: Keep left, Count: 270
-Class: 40, Desc: Roundabout mandatory, Count: 300
-Class: 41, Desc: End of no passing, Count: 210
-Class: 42, Desc: End of no passing by vehicles over 3.5 metric tons, Count: 210
+* Class0, Desc: Speed limit (20km/h), Count: 180
+* Class1, Desc: Speed limit (30km/h), Count: 1980
+* Class2, Desc: Speed limit (50km/h), Count: 2010
+* Class3, Desc: Speed limit (60km/h), Count: 1260
+* Class4, Desc: Speed limit (70km/h), Count: 1770
+* Class5, Desc: Speed limit (80km/h), Count: 1650
+* Class6, Desc: End of speed limit (80km/h), Count: 360
+* Class7, Desc: Speed limit (100km/h), Count: 1290
+* Class8, Desc: Speed limit (120km/h), Count: 1260
+* Class9, Desc: No passing, Count: 1320
+* Class10, Desc: No passing for vehicles over 3.5 metric tons, Count: 1800
+* Class11, Desc: Right-of-way at the next intersection, Count: 1170
+* Class12, Desc: Priority road, Count: 1890
+* Class13, Desc: Yield, Count: 1920
+* Class14, Desc: Stop, Count: 690
+* Class15, Desc: No vehicles, Count: 540
+* Class16, Desc: Vehicles over 3.5 metric tons prohibited, Count: 360
+* Class17, Desc: No entry, Count: 990
+* Class18, Desc: General caution, Count: 1080
+* Class19, Desc: Dangerous curve to the left, Count: 180
+* Class20, Desc: Dangerous curve to the right, Count: 300
+* Class21, Desc: Double curve, Count: 270
+* Class22, Desc: Bumpy road, Count: 330
+* Class23, Desc: Slippery road, Count: 450
+* Class24, Desc: Road narrows on the right, Count: 240
+* Class25, Desc: Road work, Count: 1350
+* Class26, Desc: Traffic signals, Count: 540
+* Class27, Desc: Pedestrians, Count: 210
+* Class28, Desc: Children crossing, Count: 480
+* Class29, Desc: Bicycles crossing, Count: 240
+* Class30, Desc: Beware of ice/snow, Count: 390
+* Class31, Desc: Wild animals crossing, Count: 690
+* Class32, Desc: End of all speed and passing limits, Count: 210
+* Class33, Desc: Turn right ahead, Count: 599
+* Class34, Desc: Turn left ahead, Count: 360
+* Class35, Desc: Ahead only, Count: 1080
+* Class36, Desc: Go straight or right, Count: 330
+* Class37, Desc: Go straight or left, Count: 180
+* Class38, Desc: Keep right, Count: 1860
+* Class39, Desc: Keep left, Count: 270
+* Class40, Desc: Roundabout mandatory, Count: 300
+* Class41, Desc: End of no passing, Count: 210
+* Class42, Desc: End of no passing by vehicles over 3.5 metric tons, Count: 210
 
 It appeared that some classes had more items than others. This histogram shows the count of each class (class number on the x axis): 
 
@@ -245,7 +246,7 @@ Accuracy: 40%
 
 For the end of speed limit sign, although the exact sign was not represented in the dataset, the closest (and expected) match was identified.
 
-An accuracy of 40$ does not reflect the 90+% accuracies of the validation and test sets. An improved model may be able to increase this accuracy, as well as a more diverse training set.
+An accuracy of 40% does not reflect the 90+% accuracies of the validation and test sets. An improved model may be able to increase this accuracy, as well as a more diverse training set.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
